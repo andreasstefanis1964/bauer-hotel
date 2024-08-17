@@ -1,0 +1,2 @@
+# bauer-hotel
+GitHub Pages
