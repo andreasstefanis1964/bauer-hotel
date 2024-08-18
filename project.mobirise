@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "datenschutz.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "lodgem5",
       "title": "LodgeM5",
@@ -22,11 +22,11 @@
         "display7Size": 1.25,
         "display4Font": "Figtree",
         "display4Size": 1.5,
-        "isRoundedButtons": false,
+        "isRoundedButtons": true,
         "isGhostButtonBorder": false,
         "underlinedLinks": false,
-        "isAnimatedOnScroll": false,
-        "isScrollToTopButton": false
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
       },
       "titlePreset": "Castle Weddings & Celebrations",
       "nameSelectPreset": "castle-weddings-&-celebrations",
@@ -87,7 +87,7 @@
     "mcSmartCart": {
       "currency": "USD"
     },
-    "uniqCompNum": 33,
+    "uniqCompNum": 34,
     "versionPublish": "5.9.11",
     "screenshot": "screenshot.png"
   },
@@ -731,6 +731,23 @@
           "_global": true,
           "_once": "menu",
           "_params": {}
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<!-- Type valid HTML here -->\n\n<div id=\"ww_9103a93f649c1\" v=\"1.3\" loc=\"id\" a=\"{&quot;t&quot;:&quot;horizontal&quot;,&quot;lang&quot;:&quot;de&quot;,&quot;sl_lpl&quot;:1,&quot;ids&quot;:[&quot;wl3220&quot;],&quot;font&quot;:&quot;Arial&quot;,&quot;sl_ics&quot;:&quot;one_a&quot;,&quot;sl_sot&quot;:&quot;celsius&quot;,&quot;cl_bkg&quot;:&quot;#FFFFFF00&quot;,&quot;cl_font&quot;:&quot;#000000&quot;,&quot;cl_cloud&quot;:&quot;#d4d4d4&quot;,&quot;cl_persp&quot;:&quot;#2196F3&quot;,&quot;cl_sun&quot;:&quot;#FFC107&quot;,&quot;cl_moon&quot;:&quot;#FFC107&quot;,&quot;cl_thund&quot;:&quot;#FF5722&quot;}\">Mehr Vorhersagen: <a href=\"https://oneweather.org/de/deutschland/21_tage/\" id=\"ww_9103a93f649c1_u\" target=\"_blank\">Wettervorschau 21 tage</a></div>[JS_CODE_0]",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_sourceTheme": "lodgem5",
+          "_anchor": "custom-html-x",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script async src=\"https://app2.weatherwidget.org/js/?id=ww_9103a93f649c1\"></script>"
+          ]
         },
         {
           "alias": false,
@@ -2223,94 +2240,9 @@
           },
           "_name": "aform1",
           "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"form1 lodgem5\" group=\"Forms\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/hotel%20bauer_entrance-1381x905.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#5b5759\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#4d7b9e\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"hidden\" name=\"usedRecaptcha\" value=\"false\"></mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Get in touch</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Sed risus pretium quam vulputate dignissim suspendisse in est ante. Quis hendrerit dolor magna eget est lorem.\n            </h4>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"form-container col-12\">\n                <div class=\"form-wrap\">\n                    <div mbr-form class=\"mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"andreas@stefanis-consulting.de\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler mx-auto\" data-verified=\"andreas@stefanis-consulting.de\">\n<div class=\"row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Herzlichen Dank für das Ausfüllen des Kontaktformulars!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> Oops...! some problem! </div>\n</div>\n<div class=\"dragArea row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h5 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style display-5\">ADD A COMMENT</h5>\n</div>\n<div class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\" data-for=\"last name\" style>\n<input type=\"text\" name=\"last name\" placeholder=\"Familienname\" data-form-field=\"last name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div data-for=\"first name\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3\">\n<input type=\"text\" name=\"first name\" placeholder=\"Vorname\" data-form-field=\"first name\" mbr-theme-style=\"display-7\" class=\"form-control display-7\" required=\"required\" value>\n</div>\n<div data-for=\"email\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"textarea\" style>\n<textarea name=\"textarea\" placeholder=\"Ihr Wunsch / Ihre Anfrage\" data-form-field=\"textarea\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-auto align-center mbr-section-btn\"><a type=\"submit\" class=\"w-100 btn btn-warning\" data-app-placeholder=\"Type Text\">SUBMIT COMMENT</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"form1 lodgem5\" group=\"Forms\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/hotel%20bauer_entrance-1381x905.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#5b5759\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#4d7b9e\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"hidden\" name=\"usedRecaptcha\" value=\"false\"></mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Get in touch</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Sed risus pretium quam vulputate dignissim suspendisse in est ante. Quis hendrerit dolor magna eget est lorem.\n            </h4>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"form-container col-12\">\n                <div class=\"form-wrap\">\n                    <div mbr-form class=\"mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"andreas@stefanis-consulting.de\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler mx-auto\" data-verified=\"andreas@stefanis-consulting.de\">\n<div class=\"row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Herzlichen Dank für das Ausfüllen des Kontaktformulars!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> Oops...! some problem! </div>\n</div>\n<div class=\"dragArea row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h5 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style display-5\">Kontaktformular</h5>\n</div>\n<div class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\" data-for=\"last name\" style>\n<input type=\"text\" name=\"last name\" placeholder=\"Familienname\" data-form-field=\"last name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div data-for=\"first name\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3\">\n<input type=\"text\" name=\"first name\" placeholder=\"Vorname\" data-form-field=\"first name\" mbr-theme-style=\"display-7\" class=\"form-control display-7\" required=\"required\" value>\n</div>\n<div data-for=\"email\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"textarea\" style>\n<textarea name=\"textarea\" placeholder=\"Ihr Wunsch / Ihre Anfrage\" data-form-field=\"textarea\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-auto align-center mbr-section-btn\"><a type=\"submit\" class=\"w-100 btn btn-warning\" data-app-placeholder=\"Type Text\">ABSENDEN</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "tfwtH0EgU2",
           "_anchor": "aform1-g",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".content-container": {
-              "display": "flex",
-              "align-items": "center",
-              "padding-top": "40px",
-              "border-top": "1px solid rgba(0, 0, 0, 0.07)",
-              "@media (max-width: 575px)": {
-                "flex-direction": "column"
-              }
-            },
-            ".icons-menu": {
-              "display": "flex"
-            },
-            ".mbr-section-title": {
-              "color": "#45494E",
-              "margin-right": "20px",
-              "@media (max-width: 575px)": {
-                "text-align": "center !important",
-                "width": "100%",
-                "margin-right": "0",
-                "margin-bottom": "10px !important"
-              }
-            },
-            ".iconfont-wrapper": {
-              "display": "flex",
-              "justify-content": "center",
-              "align-items": "center",
-              "border-radius": "50%",
-              "padding": "10px",
-              "min-width": "40px",
-              "aspect-ratio": "(1 / 1)",
-              "border": "1px solid @iconsColor",
-              "transition": ".3s all",
-              "&:not(:first-child)": {
-                "margin-left": "10px"
-              },
-              ".mbr-iconfont": {
-                "font-size": "20px",
-                "color": "@iconsColor",
-                "transition": ".3s all"
-              },
-              "&:hover": {
-                "background-color": "@iconsColor",
-                ".mbr-iconfont": {
-                  "font-size": "20px",
-                  "color": "#FFFFFF"
-                }
-              }
-            }
-          },
-          "_name": "asocial1",
-          "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"social1 lodgem5\" group=\"Social\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"SocialLikes,Socicon\">\n    \n     <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n         <select title=\"Align\" name=\"contentAlign\">\n             <option value>Left</option>\n             <option value=\"justify-content-center\">Center</option>\n             <option value=\"justify-content-end\" selected>Right</option>\n         </select>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#45494E\">\n         <select title=\"Amount\" name=\"iconsAmount\">\n             <option value=\"1\">1</option>\n             <option value=\"2\">2</option>\n             <option value=\"3\" selected>3</option>\n             <option value=\"4\">4</option>\n             <option value=\"5\">5</option>\n         </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@THEME_PATH@/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#f0e4e5\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@THEME_PATH@/components/_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    \n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"content-container w-100 {{contentAlign}}\">\n                    <h3 class=\"mbr-section-title align-center mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        Share this\n                    </h3>\n                    <div class=\"icons-menu\">\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n                        </a>\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-twitter socicon\"></span>\n                        </a>\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n                        </a>\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-linkedin socicon\"></span>\n                        </a>\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-linkedin socicon\"></span>\n                        </a>\n                        <a class=\"iconfont-wrapper\" href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                            <span mbr-icon class=\"mbr-iconfont socicon-linkedin socicon\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "tfwqqhobjV",
-          "_anchor": "asocial1-9",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -3386,7 +3318,7 @@
           },
           "_name": "aform1",
           "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"form1 lodgem5\" group=\"Forms\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/hotel%20bauer_entrance-1381x905.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#5b5759\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#4d7b9e\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"hidden\" name=\"usedRecaptcha\" value=\"false\"></mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Get in touch</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Sed risus pretium quam vulputate dignissim suspendisse in est ante. Quis hendrerit dolor magna eget est lorem.\n            </h4>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"form-container col-12\">\n                <div class=\"form-wrap\">\n                    <div mbr-form class=\"mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"andreas@stefanis-consulting.de\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler mx-auto\" data-verified=\"andreas@stefanis-consulting.de\">\n<div class=\"row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Herzlichen Dank für das Ausfüllen des Kontaktformulars!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> Oops...! some problem! </div>\n</div>\n<div class=\"dragArea row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h5 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style display-5\">ADD A COMMENT</h5>\n</div>\n<div class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\" data-for=\"last name\" style>\n<input type=\"text\" name=\"last name\" placeholder=\"Familienname\" data-form-field=\"last name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div data-for=\"first name\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3\">\n<input type=\"text\" name=\"first name\" placeholder=\"Vorname\" data-form-field=\"first name\" mbr-theme-style=\"display-7\" class=\"form-control display-7\" required=\"required\" value>\n</div>\n<div data-for=\"email\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"textarea\" style>\n<textarea name=\"textarea\" placeholder=\"Ihr Wunsch / Ihre Anfrage\" data-form-field=\"textarea\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-auto align-center mbr-section-btn\"><a type=\"submit\" class=\"w-100 btn btn-warning\" data-app-placeholder=\"Type Text\">SUBMIT COMMENT</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"form1 lodgem5\" group=\"Forms\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/hotel%20bauer_entrance-1381x905.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#5b5759\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#4d7b9e\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"hidden\" name=\"usedRecaptcha\" value=\"false\"></mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Get in touch</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Sed risus pretium quam vulputate dignissim suspendisse in est ante. Quis hendrerit dolor magna eget est lorem.\n            </h4>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"form-container col-12\">\n                <div class=\"form-wrap\">\n                    <div mbr-form class=\"mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"andreas@stefanis-consulting.de\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler mx-auto\" data-verified=\"andreas@stefanis-consulting.de\">\n<div class=\"row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Herzlichen Dank für das Ausfüllen des Kontaktformulars!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> Oops...! some problem! </div>\n</div>\n<div class=\"dragArea row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h5 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style display-5\">Kontaktformular</h5>\n</div>\n<div class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\" data-for=\"last name\" style>\n<input type=\"text\" name=\"last name\" placeholder=\"Familienname\" data-form-field=\"last name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div data-for=\"first name\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3\">\n<input type=\"text\" name=\"first name\" placeholder=\"Vorname\" data-form-field=\"first name\" mbr-theme-style=\"display-7\" class=\"form-control display-7\" required=\"required\" value>\n</div>\n<div data-for=\"email\" class=\"col-lg-4 col-md-12 col-sm-12 form-group mb-3 mb-3 mb-3\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control display-7\" value>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"textarea\" style>\n<textarea name=\"textarea\" placeholder=\"Ihr Wunsch / Ihre Anfrage\" data-form-field=\"textarea\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-auto align-center mbr-section-btn\"><a type=\"submit\" class=\"w-100 btn btn-warning\" data-app-placeholder=\"Type Text\">SUBMIT COMMENT</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "ulNA9Mub9z",
           "_protectedParams": [],
           "_global": false,
