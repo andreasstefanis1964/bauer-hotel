@@ -1313,7 +1313,7 @@ a:hover {
 }
 .cid-tfwmgSK1xV .dropdown-menu,
 .cid-tfwmgSK1xV .navbar.opened {
-  background: #c7b4b4 !important;
+  background: #94a393 !important;
 }
 .cid-tfwmgSK1xV .nav-item:focus,
 .cid-tfwmgSK1xV .nav-link:focus {
@@ -1341,7 +1341,7 @@ a:hover {
   box-sizing: content-box;
   min-height: 80px;
   position: relative;
-  background-color: #c7b4b4;
+  background-color: #94a393;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07) !important;
 }
 .cid-tfwmgSK1xV .navbar.opened {
@@ -1457,7 +1457,7 @@ a:hover {
   padding: 0.667em 1.667em;
 }
 .cid-tfwmgSK1xV .navbar.navbar-expand-lg .dropdown .dropdown-menu {
-  background: #c7b4b4;
+  background: #94a393;
 }
 .cid-tfwmgSK1xV .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
   margin: 0;
@@ -1668,7 +1668,7 @@ a:hover {
   }
 }
 .cid-tfwmgSK1xV .offcanvas_box button.btn_offcanvas {
-  background-color: #836364;
+  background-color: #94a393;
   outline: none;
   width: 80px;
   height: 80px;
@@ -1678,7 +1678,7 @@ a:hover {
   transition: all 0.2s;
   position: relative;
   align-self: center;
-  color: #c7b4b4;
+  color: #94a393;
 }
 @media (max-width: 991px) {
   .cid-tfwmgSK1xV .offcanvas_box button.btn_offcanvas {
@@ -1753,7 +1753,7 @@ a:hover {
   margin-left: auto;
   text-align: left;
   padding: 70px 0 0;
-  background-color: #836364;
+  background-color: #728771;
 }
 @media (max-width: 991px) {
   .cid-tfwmgSK1xV .offcanvas-body {
@@ -1804,7 +1804,7 @@ a:hover {
 }
 .cid-tfwmgSK1xV .navbar-nav .nav-item .dropdown-menu {
   position: static !important;
-  background-color: #836364 !important;
+  background-color: #728771 !important;
 }
 .cid-tfwmgSK1xV .offcanvas_footer {
   margin-top: auto;
