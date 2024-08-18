@@ -941,201 +941,6 @@
               "background-color": "@bg-value"
             },
             "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".tabl-container": {
-              "width": "100%",
-              "display": "flex",
-              "flex-wrap": "wrap"
-            },
-            ".item-container": {
-              "width": "100%",
-              "display": "flex",
-              "justify-content": "flex-start",
-              "align-items": "center",
-              "margin-bottom": "10px",
-              "padding": "10px 0"
-            },
-            ".frame-item": {
-              "width": "40px",
-              "height": "1px",
-              "margin-right": "20px",
-              "background-color": "@iconColor"
-            },
-            ".card-text": {
-              "color": "#45494E",
-              "flex-grow": "1"
-            }
-          },
-          "_name": "alist2",
-          "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list2 lodgem5\" group=\"List\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Icon\" name=\"showIcon\" checked>\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#4d7b9e\" condition=\"showIcon\">\n        <select title=\"Count\" name=\"countItem\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"tabl-container\">\n                    <div class=\"item-container\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">Vielfalt an Zimmerkategorien: 6 Zimmertypen und 1 Ferienwohnung<br></p>\n                    </div>\n\n                    <div class=\"item-container\" mbr-if=\"countItem >1\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">Alle Doppelzimmer sind auch für Einzelbelegung geeignet.</p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >2\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">Ein sehr gutes Preis-/Leistungsverhältnis inkl. kostenfreie Parkplätze und W-LAN</p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >3\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">Direktbuchung mit besseren Konditionen und höhere Flexibilität, als bei den Portalen.</p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >4\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">24/7 Check-in, ÖPNV Haltestelle vor der Tür.\n                        </p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >5\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">\n                            Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eget lorem dolor sed.\n                        </p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >6\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">\n                            Tellus rutrum tellus pellentesque eu tincidunt lacus vel facilisis volutpat est velit facilisi etiam dignissim.\n                        </p>\n                    </div>\n                    <div class=\"item-container\" mbr-if=\"countItem >7\">\n                        <div class=\"frame-item\" mbr-if=\"showIcon\"></div>\n                        <p class=\"card-text mbr-fonts-style mb-0\" data-app-selector=\".card-text\" mbr-theme-style=\"display-7\">\n                            Diam quis enim lobortis scelerisque fermentum dui ultrices sagittis orci a scelerisque. Mollis aliquam ut porttitor leo a diam.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ulKdUPmW1e",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "alist2-8"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".mbr-section-head": {
-              "margin-bottom": "30px",
-              "@media (max-width: 767px)": {
-                "margin-bottom": "18px"
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#45494E"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#45494E"
-            },
-            ".card": {
-              "padding-bottom": "18px",
-              "border-top": "1px solid rgba(0, 0, 0, 0.07)"
-            },
-            ".card-header": {
-              "background-color": "transparent",
-              "margin-bottom": "0",
-              "border-bottom": "none !important",
-              "padding": "0"
-            },
-            ".panel-title": {
-              "padding": "18px 0",
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "space-between",
-              "&[aria-expanded=\"true\"]": {
-                ".sign": {
-                  "transform": "rotate(180deg)"
-                }
-              },
-              "&:hover": {
-                ".sign": {
-                  "&:after": {
-                    "opacity": "1",
-                    "transform": "scale(1)"
-                  }
-                }
-              }
-            },
-            ".mbr-iconfont": {
-              "font-size": "16px !important",
-              "font-family": "'Moririse2' !important",
-              "color": "@iconColor",
-              "margin-left": "1rem"
-            },
-            ".panel-group": {
-              "border": "none"
-            },
-            ".panel-body": {
-              "padding": "0 0 28px"
-            },
-            ".panel-text": {
-              "color": "#45494E"
-            },
-            ".mbr-section-btn": {
-              "margin-top": "46px",
-              "@media (max-width: 767px)": {
-                "margin-top": "20px"
-              },
-              ".btn-white": {
-                "color": "#45494E !important",
-                "border": "1px solid #45494E !important",
-                "background-color": "transparent !important",
-                "&:hover": {
-                  "color": "#FFFFFF !important",
-                  "border": "1px solid #45494E !important",
-                  "background-color": "#45494E !important"
-                }
-              }
-            },
-            ".panel-title-edit": {
-              "color": "#45494E"
-            },
-            ".sign": {
-              "width": "34px",
-              "height": "34px",
-              "padding": "8px",
-              "display": "flex",
-              "justify-content": "center",
-              "align-items": "center",
-              "position": "relative",
-              "transition": "opacity 0.2s ease, transform 0.2s ease",
-              "&:after": {
-                "content": "''",
-                "position": "absolute",
-                "left": "0",
-                "top": "0",
-                "width": "100%",
-                "height": "100%",
-                "border-radius": "50%",
-                "border": "1px solid currentColor",
-                "opacity": "0",
-                "transform": "scale(0.75)",
-                "transition": "opacity 0.2s ease, transform 0.2s ease"
-              }
-            }
-          },
-          "_name": "alist1",
-          "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list1 lodgem5\" group=\"List\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow, mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked=\"\">\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#45494E\" selected=\"\">\n        <select title=\"Amount\" name=\"cardAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected=\"\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected=\"\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked=\"\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12\">\n                <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mb-0 mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">\n                       <b>Nesbitt Castle &amp; Gardens</b>\n                    </h3>\n                    <h4 class=\"mbr-section-subtitle mb-0 mt-2 mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">\n                        Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies.\n                    </h4>\n                </div>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n\n                    <div class=\"card\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    When are you open?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Porttitor eget dolor morbi non arcu risus quis varius. Eget nullam non nisi est sit.\n                                    Pulvinar etiam non quam lacus suspendisse faucibus interdum. Morbi blandit cursus\n                                    risus at ultrices mi tempus imperdiet nulla.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"card\" mbr-if=\"cardAmount > 1\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Is there disabled access to Nesbitt Castle?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n\n                    <div class=\"card\" mbr-if=\"cardAmount > 2\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Is there Wi-Fi available within the Castle?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 3\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Can I take photos inside Nesbitt Castle?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 4\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Do I need to book in advance?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 5\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Do I need to pay to access Garden?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 6\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse7\" aria-expanded=\"false\" aria-controls=\"collapse7\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Are dogs allowed at Nesbitt Castle?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse7\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 7\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core=\"\" href=\"#collapse8\" aria-expanded=\"false\" aria-controls=\"collapse8\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Is there charging points for electric vehicles?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse8\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ulKgwbcM0A",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "alist1-9"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)",
               "& when (@overlay)": {
                 ".mbr-overlay": {
@@ -2110,116 +1915,6 @@
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              "& when (@overlay)": {
-                ".mbr-overlay": {
-                  "background": "@overlayColor",
-                  "opacity": "@overlayOpacity"
-                }
-              }
-            },
-            ".row": {
-              "justify-content": "flex-start",
-              "align-items": "stretch"
-            },
-            ".mbr-section-head": {
-              "margin-bottom": "120px",
-              "@media (max-width: 991px)": {
-                "margin-bottom": "100px"
-              },
-              "@media (max-width: 767px)": {
-                "margin-bottom": "70px"
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#45494E"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#45494E"
-            },
-            ".item": {
-              "margin-bottom": "56px",
-              "@media (max-width: 767px)": {
-                "margin-bottom": "50px"
-              }
-            },
-            ".item-content": {
-              "display": "flex",
-              "flex-direction": "column",
-              "padding": "10%",
-              "width": "100%",
-              "flex-grow": "1",
-              "& when (@contentBg)": {
-                "background-color": "@contentBgColor"
-              }
-            },
-            ".item-title": {
-              "color": "#45494E",
-              "margin-bottom": "50px !important",
-              "@media (max-width: 767px)": {
-                "margin-bottom": "34px !important"
-              }
-            },
-            ".item-subtitle": {
-              "color": "#45494E",
-              "margin-bottom": "24px"
-            },
-            ".mbr-section-btn": {
-              "margin-bottom": "20px"
-            },
-            ".mbr-text": {
-              "color": "#A2A4A7",
-              "margin-top": "auto"
-            },
-            ".item-img": {
-              "position": "relative",
-              "width": "100%",
-              "overflow": "hidden",
-              "padding-bottom": "75%"
-            },
-            ".img-wrap": {
-              "position": "absolute",
-              "top": "0",
-              "left": "0",
-              "width": "100%",
-              "height": "100%",
-              "transition": "transform 0.3s ease",
-              "img": {
-                "width": "100%",
-                "height": "100%",
-                "object-fit": "cover"
-              }
-            },
-            ".item-wrapper": {
-              "height": "100%",
-              "display": "flex",
-              "flex-direction": "column",
-              "&:hover": {
-                ".img-wrap": {
-                  "transform": "scale(1.1)"
-                }
-              }
-            }
-          },
-          "_name": "agallery6",
-          "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery6 lodgem5\" group=\"Sliders & Galleries\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showSubtitle\" title=\"Subtitle\">\n        <header>Cards</header>\n        <input type=\"checkbox\" name=\"showCardTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showCardSubtitle\" title=\"Subtitle\" checked>\n        <input type=\"checkbox\" name=\"showText\" title=\"Text\">\n        <input type=\"checkbox\" name=\"showButtons\" title=\"Buttons\" checked>\n        <input type=\"checkbox\" name=\"contentBg\" title=\"BG\" checked>\n        <input type=\"color\" title=\"Color\" name=\"contentBgColor\" value=\"#FFFFFF\" condition=\"contentBg\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"@THEME_PATH@/components/_images/background3.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#f0e4e5\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#F8F6F2\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row main-row\">\n            <div class=\"item-col col-12\">\n                <div class=\"row\">\n                    <div class=\"text-col col-12\">\n                        <div class=\"mbr-section-head col-12\" mbr-if=\"showTitle || showSubtitle\">\n                            <h4 class=\"mbr-section-title align-center mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Memories that last a lifetime<br> and beyond.</h4>\n                            <h5 class=\"mbr-section-subtitle align-center mbr-fonts-style mt-4 mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                                Donec enim diam vulputate ut pharetra sit amet. <br>\n                                Diam sit amet nisl suscipit adipiscing.\n                            </h5>\n                        </div>\n                    </div>\n                    <div class=\"item features-image col-12 col-md-6\">\n                        <div class=\"item-wrapper\">\n                            <div class=\"item-img\">\n                                <div class=\"img-wrap\">\n                                    <img src=\"@PROJECT_PATH@/assets/images/pexels-rocsana-nicoleta-gurza-948185.jpg\" alt=\"Mobirise Website Builder\">\n                                </div>\n                            </div>\n                            <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                                <h5 class=\"item-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                                    Et netus et malesuada fames ac\n                                </h5>\n                                <h6 class=\"item-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle, .mbr-section-btn\" mbr-if=\"showCardSubtitle\">\n                                    Integer vitae justo eget magna fermentum. Phasellus faucibus scelerisque eleifend.\n                                </h6>\n\n                                <div class=\"mbr-section-btn item-footer align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\">\n                                    <a class=\"btn btn-black-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        <span class=\"mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn\"></span>\n                                        Discover more\n                                    </a>\n                                </div>\n                                <p class=\"mbr-text mbr-fonts-style align-center mb-0\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                    14th January 2022\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"item features-image col-12 col-md-6\">\n                        <div class=\"item-wrapper\">\n                            <div class=\"item-img\">\n                                <div class=\"img-wrap\">\n                                    <img src=\"@PROJECT_PATH@/assets/images/pexels-tembela-bohle-1114425.jpg\" alt=\"Mobirise Website Builder\">\n                                </div>\n                            </div>\n                            <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                                <h5 class=\"item-title align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                                    Tristique nulla aliquet enim tortor\n                                </h5>\n                                <h6 class=\"item-subtitle align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-subtitle, .mbr-section-btn\" mbr-if=\"showCardSubtitle\">\n                                    Integer vitae justo eget magna fermentum. Phasellus faucibus scelerisque eleifend.\n                                </h6>\n\n                                <div class=\"mbr-section-btn align-center item-footer\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-buttons mbr-theme-style=\"display-7\">\n                                    <a class=\"btn btn-black-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        <span class=\"mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn\"></span>\n                                        Discover more\n                                    </a>\n                                </div>\n                                <p class=\"mbr-text mbr-fonts-style align-center mb-0\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                    26th April 2022\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "tfwt4XYLb8",
-          "_anchor": "agallery6-e",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
             "background-color": "@bgColor",
             "& when (@reverseContent)": {
               ".row": {
@@ -2247,79 +1942,6 @@
           "_customHTML": "<section data-bs-version=\"5.1\" class=\"article4 lodgem5\" group=\"Article\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"8\" value=\"6\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#f0e4e5\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md col-title\">\n                <h5 class=\"mbr-section-title mbr-fonts-style mb-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-5\">\n                    Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam.\n                    Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum.\n                </h5>\n                <h6 class=\"mbr-section-subtitle mbr-fonts-style mb-0\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-4\">\n                    Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.\n                </h6>\n            </div>\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n                    Rutrum quisque non tellus orci ac auctor augue mauris. Duis at tellus at urna condimentum mattis\n                    pellentesque id nibh. At volutpat diam ut venenatis tellus in. Nunc congue nisi vitae suscipit.\n                    Sollicitudin aliquam ultrices sagittis orci. Viverra maecenas accumsan lacus vel.\n                    <br>\n                    <br>\n                    Tortor at auctor\n                    urna nunc id cursus metus aliquam. Tortor condimentum lacinia quis vel eros donec ac odio. Vel elit\n                    scelerisque mauris pellentesque pulvinar pellentesque habitant. Molestie ac feugiat sed lectus\n                    vestibulum mattis. Neque aliquam vestibulum morbi blandit cursus risus. Aenean euismod elementum\n                    nisi quis eleifend quam. Ultrices eros in cursus turpis massa tincidunt.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "tfwv5px35b",
           "_anchor": "aarticle4-j",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".mbr-section-head": {
-              "margin-bottom": "56px",
-              "@media (max-width: 991px)": {
-                "margin-bottom": "50px"
-              },
-              "@media (max-width: 767px)": {
-                "margin-bottom": "45px"
-              }
-            },
-            ".google-map": {
-              "height": "600px",
-              "position": "relative",
-              "iframe": {
-                "height": "100%",
-                "width": "100%"
-              },
-              "[data-state-details]": {
-                "color": "#6b6763",
-                "height": "1.5em",
-                "margin-top": "-0.75em",
-                "padding-left": "1.25rem",
-                "padding-right": "1.25rem",
-                "position": "absolute",
-                "text-align": "center",
-                "top": "50%",
-                "width": "100%"
-              },
-              "&[data-state]": {
-                "background": "#e9e5dc"
-              },
-              "&[data-state=\"loading\"]": {
-                "[data-state-details]": {
-                  "display": "none"
-                }
-              }
-            }
-          },
-          "_name": "amap2",
-          "_sourceTheme": "lodgem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"map1 lodgem5\" group=\"Contact\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Map</header>\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"<iframe <iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2224.3131068212174!2d8.747086197715745!3d52.0982634430191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba6b35c5ef2bbd%3A0xf0f33fb92d219a8c!2sAn%20d.%20Hellr%C3%BCsche%2041%2C%2032105%20Bad%20Salzuflen!5e0!3m2!1sde!2sde!4v1723666344414!5m2!1sde!2sde&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;></iframe>\" value=\"<iframe <iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2224.3131068212174!2d8.747086197715745!3d52.0982634430191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba6b35c5ef2bbd%3A0xf0f33fb92d219a8c!2sAn%20d.%20Hellr%C3%BCsche%2041%2C%2032105%20Bad%20Salzuflen!5e0!3m2!1sde!2sde!4v1723666344414!5m2!1sde!2sde&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;></iframe>\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Ihr Weg zu uns:</h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-0 mt-3\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Find us here\n            </h4>\n        </div>\n        <div class=\"google-map\" mbr-map=\"googleMap\">\n        </div>\n    </div>\n</section>",
-          "_cid": "ulsrO1kCpb",
-          "_anchor": "amap2-0",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -2455,6 +2077,79 @@
           "_customHTML": "<section data-bs-version=\"5.1\" class=\"list1 lodgem5\" group=\"List\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow, mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#45494E\" selected>\n        <select title=\"Amount\" name=\"cardAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@THEME_PATH@/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#f0e4e5\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@THEME_PATH@/components/_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12\">\n                <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mb-0 mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\"><b>Haben Sie Fragen? Hier finden Sie einige Antworten:</b></h3>\n                    <h4 class=\"mbr-section-subtitle mb-0 mt-2 mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">\n                        Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies.\n                    </h4>\n                </div>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n\n                    <div class=\"card\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Nisi vitae suscipit tellus mauris a diam?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Porttitor eget dolor morbi non arcu risus quis varius. Eget nullam non nisi est sit.\n                                    Pulvinar etiam non quam lacus suspendisse faucibus interdum. Morbi blandit cursus\n                                    risus at ultrices mi tempus imperdiet nulla.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"card\" mbr-if=\"cardAmount > 1\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">&nbsp;Amet volutpat consequat mauris nunc?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n\n                    <div class=\"card\" mbr-if=\"cardAmount > 2\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Lobortis elementum nibh tellus ?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 3\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Elit scelerisque mauris pellentesque?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 4\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Do I need to book in advance?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 5\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Do I need to pay to access Garden?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 6\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse7\" aria-expanded=\"false\" aria-controls=\"collapse7\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Are dogs allowed at Nesbitt Castle?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse7\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 7\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse8\" aria-expanded=\"false\" aria-controls=\"collapse8\">\n                                <h6 class=\"panel-title-edit mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Is there charging points for electric vehicles?\n                                </h6>\n                                <span class=\"sign mbr-iconfont mbri-arrow-down\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse8\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text, .mbr-section-btn\">\n                                    Accumsan lacus vel facilisis volutpat est velit egestas. Suspendisse ultrices gravida\n                                    dictum fusce ut placerat. Semper feugiat nibh sed pulvinar.\n                                    Egestas quis ipsum suspendisse ultrices gravida.\n                                </p>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                                    <a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                                        Read more\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "tfwqry9SUC",
           "_anchor": "alist1-a",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".mbr-section-head": {
+              "margin-bottom": "56px",
+              "@media (max-width: 991px)": {
+                "margin-bottom": "50px"
+              },
+              "@media (max-width: 767px)": {
+                "margin-bottom": "45px"
+              }
+            },
+            ".google-map": {
+              "height": "600px",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                }
+              }
+            }
+          },
+          "_name": "amap2",
+          "_sourceTheme": "lodgem5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"map1 lodgem5\" group=\"Contact\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Map</header>\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"<iframe <iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2224.3131068212174!2d8.747086197715745!3d52.0982634430191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba6b35c5ef2bbd%3A0xf0f33fb92d219a8c!2sAn%20d.%20Hellr%C3%BCsche%2041%2C%2032105%20Bad%20Salzuflen!5e0!3m2!1sde!2sde!4v1723666344414!5m2!1sde!2sde&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;></iframe>\" value=\"<iframe <iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2224.3131068212174!2d8.747086197715745!3d52.0982634430191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba6b35c5ef2bbd%3A0xf0f33fb92d219a8c!2sAn%20d.%20Hellr%C3%BCsche%2041%2C%2032105%20Bad%20Salzuflen!5e0!3m2!1sde!2sde!4v1723666344414!5m2!1sde!2sde&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;></iframe>\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Ihr Weg zu uns:</h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-0 mt-3\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Find us here\n            </h4>\n        </div>\n        <div class=\"google-map\" mbr-map=\"googleMap\">\n        </div>\n    </div>\n</section>",
+          "_cid": "ulsrO1kCpb",
+          "_anchor": "amap2-0",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
