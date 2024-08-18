@@ -4392,9 +4392,6 @@ a:hover {
   position: absolute;
   top: 0;
 }
-.cid-ulOmFfCt1D .row {
-  flex-direction: row-reverse;
-}
 @media (max-width: 991px) {
   .cid-ulOmFfCt1D .row {
     flex-direction: column;
@@ -4523,9 +4520,6 @@ a:hover {
   position: absolute;
   top: 0;
 }
-.cid-ulOmFghfoo .row {
-  flex-direction: row-reverse;
-}
 @media (max-width: 991px) {
   .cid-ulOmFghfoo .row {
     flex-direction: column;
@@ -4653,9 +4647,6 @@ a:hover {
   height: 100%;
   position: absolute;
   top: 0;
-}
-.cid-ulOmFgY2lD .row {
-  flex-direction: row-reverse;
 }
 @media (max-width: 991px) {
   .cid-ulOmFgY2lD .row {
