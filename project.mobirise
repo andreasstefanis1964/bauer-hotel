@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "datenschutz.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "lodgem5",
       "title": "LodgeM5",
@@ -96,7 +96,7 @@
       "settings": {
         "main": true,
         "title": "Willkommen",
-        "meta_descr": "Hotel bauer in Bad Salzuflen",
+        "meta_descr": "Hotel Bauer in Bad Salzuflen",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
