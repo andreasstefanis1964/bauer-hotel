@@ -1895,18 +1895,6 @@ a:hover {
   color: #45494E !important;
   background-color: #FFFFFF !important;
 }
-#custom-html-x {
-  /* Type valid CSS here */
-}
-#custom-html-x div {
-  padding: 80px 0;
-  color: #777;
-  text-align: center;
-}
-#custom-html-x p {
-  font-size: 60px;
-  color: #777;
-}
 .cid-tfwmi2c9NS {
   display: flex;
   padding-top: 75px;
@@ -2154,6 +2142,18 @@ a:hover {
 }
 .cid-ulK7oUWm47 .item-wrapper:hover .img-wrap {
   transform: scale(1.1);
+}
+#custom-html-x {
+  /* Type valid CSS here */
+}
+#custom-html-x div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-x p {
+  font-size: 60px;
+  color: #777;
 }
 .cid-tfwraNNowM {
   padding-top: 5rem;
