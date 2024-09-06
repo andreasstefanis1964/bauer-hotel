@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "page3.html",
+    "currentPage": "welcome-in-bad-salzuflen.html",
     "theme": {
       "name": "lodgem5",
       "title": "LodgeM5",
@@ -3984,7 +3984,7 @@
         }
       ]
     },
-    "page3.html": {
+    "welcome-in-bad-salzuflen.html": {
       "settings": {
         "title": "Welcome",
         "meta_descr": "Hotel Bauer in Bad Salzuflen",
